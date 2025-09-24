@@ -1,3 +1,7 @@
+---
+title: "Kubernetes and Cloud-Native Associate (KCNA)"
+# summary: "Kubernetes and Cloud-Native Associate (KCNA)"
+---
 # Kubernetes and Cloud-Native Associate (KCNA)
 
 ## Scheduling
