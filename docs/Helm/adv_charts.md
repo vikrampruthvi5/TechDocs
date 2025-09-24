@@ -26,13 +26,13 @@ Now the dependencies have been defined. Let’s update the dependency
 
 By now, the dependency chart has been downloaded and stored in the charts folder from the central repository.
 
-<img src="img/media/image29.png" style="width:6.5in;height:3.13889in" />
+![Helm Chart Example](img/media/image29.png)
 
 ### Dependency Version Range
 
 Instead of hardcoding the chart version in the dependency, we can mention range.
 
-<img src="img/media/image51.png" style="width:6.5in;height:3.33333in" />
+![Helm Chart Example](img/media/image51.png)
 
 Other options
 
@@ -42,7 +42,7 @@ Other options
 
 Helm also generates a lock file for charts. Its called chart.lock. This file consists of the dependency list along with the version of chart.
 
-<img src="img/media/image23.png" style="width:6.5in;height:2.43056in" />
+![Chart Lock Example](img/media/image23.png)
 
 ### Using RepoName instead of URL
 
@@ -50,7 +50,7 @@ If we already have a repository thats already downloaded to local, we can mentio
 
 “@bitnami”
 
-<img src="img/media/image103.png" style="width:6.5in;height:2.33473in" />
+![Using RepoName Example](img/media/image103.png)
 
 ### Conditional Dependency
 
@@ -66,11 +66,11 @@ condition: mysql.enabled
 
 Below is when the mysql is disabled
 
-<img src="img/media/image114.png" style="width:6.5in;height:5.05556in" />
+![MySQL Disabled Example](img/media/image114.png)
 
 Below is when the condition is set to true.
 
-<img src="img/media/image89.png" style="width:6.5in;height:4.91667in" />
+![MySQL Enabled Example](img/media/image89.png)
 
 ### Multiple Conditional Dependencies
 
@@ -78,7 +78,7 @@ If you have multiple conditions, instead of repeating values in values.yaml you 
 
 In the below screenshot, tags are used to disable mysql installation.
 
-<img src="img/media/image22.png" style="width:6.5in;height:4.79167in" />
+![Tags Example](img/media/image22.png)
 
 ## Passing Values to Dependencies
 
@@ -92,13 +92,13 @@ auth:
 
 rootPassword: test1234
 
-<img src="img/media/image98.png" style="width:6.5in;height:2.48611in" />
+![Custom Values Example](img/media/image98.png)
 
 Let’s test the custom values
 
-<img src="img/media/image50.png" style="width:6.5in;height:3.13889in" />
+![Testing Custom Values Example 1](img/media/image50.png)
 
-<img src="img/media/image109.png" style="width:6.5in;height:1.40278in" />
+![Testing Custom Values Example 2](img/media/image109.png)
 
 ### Read Values from Child Chart
 
@@ -138,7 +138,7 @@ import-values:
 
 With this configuration, you can get use mysql’s service details in the parent yamls.
 
-<img src="img/media/image62.png" style="width:6.5in;height:3.44444in" />
+![Using Non-Exported Values Example](img/media/image62.png)
 
 ## Hooks
 
@@ -146,7 +146,7 @@ Used to take special actions during the release process. The file is created und
 
 hookpod.yaml is the file that can be used to create any kubernetes resources
 
-<img src="img/media/image60.png" style="width:5.69792in;height:3.40764in" />
+![HookPod Example](img/media/image60.png)
 
 In the above hookpod, a busy box pod is getting created. The hook is identified based on the annotations that are added in the yaml file.
 
@@ -191,11 +191,11 @@ Ascending order. If you have multiple hooks, you can define this.
 
 ### Create and use hook
 
-<img src="img/media/image88.png" style="width:6.5in;height:6.05556in" />
+![Create and Use Hook Example](img/media/image88.png)
 
 With hook-succeeded in the delete-policy, the pod is deleted when the hook is successfully created.
 
-<img src="img/media/image75.png" style="width:6.5in;height:3.375in" />
+![Hook Delete Policy Example](img/media/image75.png)
 
 ## Testing your chart
 
@@ -203,7 +203,7 @@ By default when a new chart is created, test-connection.yaml file is created.
 
 By default a test type hook is added in the annotations.
 
-<img src="img/media/image83.png" style="width:6.5in;height:2.27778in" />
+![Test Connection Example](img/media/image83.png)
 
 In above case, the test is run on the nginx pod, wget command is used to test the connection. If the wget command returns 0 its successful and if it returns non-zero code, then its a failure.
 
@@ -215,7 +215,7 @@ Then run the below command to run the tests.
 
 \$helm test secondchart
 
-<img src="img/media/image68.png" style="width:6.5in;height:2.18056in" />
+![Helm Test Example](img/media/image68.png)
 
 # Assignment 3
 
@@ -233,7 +233,7 @@ type: NodePort
 
 nodePort: 30007
 
-<img src="img/media/image117.png" style="width:6.5in;height:6.48611in" />
+![Assignment Example](img/media/image117.png)
 
 # Repositories
 
@@ -255,19 +255,19 @@ Or use command \$ helm repo index chartsrepo/
 
 This will create index.yaml file.
 
-<img src="img/media/image110.png" style="width:6.5in;height:0.77778in" />
+![Index YAML Example](img/media/image110.png)
 
 Index.yaml contents
 
-<img src="img/media/image46.png" style="width:6.5in;height:1.55556in" />
+![Index YAML Contents Example](img/media/image46.png)
 
 Now package and put the chart in the chartsrepo folder.
 
-<img src="img/media/image19.png" style="width:6.5in;height:1.20833in" />
+![Package Chart Example](img/media/image19.png)
 
 Now update the repo index and observe the changes.
 
-<img src="img/media/image24.png" style="width:6.5in;height:0.80069in" /><img src="img/media/image24.png" style="width:6.5in;height:2.97392in" />
+![Update Repo Index Example](img/media/image24.png)
 
 ## Host webserver using python
 
@@ -275,23 +275,23 @@ Run the http server in the chartsrepo directory
 
 \$ python3 -m http.server --bind 127.0.0.1 8080
 
-<img src="img/media/image99.png" style="width:6.5in;height:0.83333in" />
+![Python Webserver Example](img/media/image99.png)
 
-## <img src="img/media/image81.png" style="width:6.5in;height:1.70833in" />Using the local repository
+## Using the local repository
 
 First add the local repository
 
 Currently we only have the bitnami repo
 
-<img src="img/media/image64.png" style="width:5.04167in;height:0.89583in" />
+![Bitnami Repo Example](img/media/image64.png)
 
 Add the local repo
 
-<img src="img/media/image28.png" style="width:6.5in;height:1.04167in" />
+![Add Local Repo Example](img/media/image28.png)
 
 Install from repo
 
-<img src="img/media/image20.png" style="width:5.38021in;height:2.82488in" />
+![Install from Repo Example](img/media/image20.png)
 
 ## Installing using HELM PULL
 
@@ -299,17 +299,17 @@ Instead of pulling the chart from the local or remote repository, we can first d
 
 Pull the chart locally.
 
-<img src="img/media/image55.png" style="width:5.84375in;height:1.40625in" />
+![Pull Chart Locally Example](img/media/image55.png)
 
 ## Update Repositories
 
 Sometimes when the new chart is added to the repositories, helm search command won’t pickup as the helm search command uses a local cache to search for the chart packages.
 
-<img src="img/media/image18.png" style="width:6.44792in;height:1.61458in" />
+![Update Repositories Example 1](img/media/image18.png)
 
 In order to update the local chart repo use
 
-<img src="img/media/image93.png" style="width:6.5in;height:1.63889in" />
+![Update Repositories Example 2](img/media/image93.png)
 
 With this, the local cache is updated and we can search the new cache.
 
@@ -339,23 +339,25 @@ By this, github repository is configured as webserver and all the changes are pu
 
 Once saved, the site url is generated and you can use it as a helm repository.
 
-<img src="img/media/image21.png" style="width:6.5in;height:2.58333in" />
+![GitHub Pages Example](img/media/image21.png)
 
 Index the repository
 
-<img src="img/media/image33.png" style="width:5.375in;height:1.26042in" />
+![Index Repository Example](img/media/image33.png)
 
 Push changes to git
 
-<img src="img/media/image61.png" style="width:6.5in;height:3.98611in" />
+![Push Changes to Git Example](img/media/image61.png)
 
 Change the settings of the repository
 
-<img src="img/media/image128.png" style="width:6.5in;height:3.11111in" />
+![Change Repository Settings Example](img/media/image128.png)
 
-Upon saving copy the URL and add repo in your local<img src="img/media/image108.png" style="width:6.5in;height:1.12228in" />
+Upon saving copy the URL and add repo in your local
 
-<img src="img/media/image115.png" style="width:6.5in;height:2.01389in" />
+![Add Repo Locally Example](img/media/image108.png)
+
+![Add Repo Locally Example 2](img/media/image115.png)
 
 ## OCI Experimental
 
@@ -363,66 +365,31 @@ Using the Open Container Initiative to host helm repositories.
 
 First enable the HELM_EXPERIMENTAL_OCI. You can do it by configuring an environment variable.
 
-<img src="img/media/image100.png" style="width:6in;height:0.76042in" />
+![Enable OCI Example](img/media/image100.png)
 
 Run local OCI registry using Docker image
 
-<img src="img/media/image13.png" style="width:6.5in;height:0.80556in" />
+![Run OCI Registry Example](img/media/image13.png)
 
 Now the OCI registry is created. Let’s create the package from a chart
 
-<img src="img/media/image95.png" style="width:6.5in;height:1.30556in" />
+![Create Package Example](img/media/image95.png)
 
 Commands
 
-<table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;">Push chart</th>
-<th style="text-align: left;">helm push ocichart-0.2.0.tgz oci://localhost:5001/helm-charts</th>
-</tr>
-<tr>
-<th style="text-align: left;">Show all</th>
-<th style="text-align: left;">helm show all oci://localhost:5001/helm-charts/ocichart --version 0.1.0</th>
-</tr>
-<tr>
-<th style="text-align: left;">Pull chart</th>
-<th style="text-align: left;">helm pull oci://localhost:5001/helm-charts/ocichart --version 0.1.0</th>
-</tr>
-<tr>
-<th style="text-align: left;">See template</th>
-<th style="text-align: left;">helm template myrelease oci://localhost:5001/helm-charts/ocichart –version 0.1.0</th>
-</tr>
-<tr>
-<th style="text-align: left;">Install chart</th>
-<th style="text-align: left;">helm install myrelease oci://localhost:5001/helm-charts/ocichart –version 0.1.0</th>
-</tr>
-<tr>
-<th style="text-align: left;">Upgrade chart</th>
-<th>helm upgrade myrelease oci://localhost:5001/helm-charts/ocichart –version 0.2.0</th>
-</tr>
-<tr>
-<th style="text-align: left;">Login to registry</th>
-<th><p>helm registry login -u username oci://localhost:5001</p>
-<h6 id="only-for-remote-registry">(Only for remote registry)</h6></th>
-</tr>
-<tr>
-<th style="text-align: left;">Logout from registry</th>
-<th><p>helm registry logout oci://localhost:5001</p>
-<p><em>(Only for remote registry)</em></p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+| Push chart | helm push ocichart-0.2.0.tgz oci://localhost:5001/helm-charts |
+|------------|-------------------------------------------------------------|
+| Show all   | helm show all oci://localhost:5001/helm-charts/ocichart --version 0.1.0 |
+| Pull chart | helm pull oci://localhost:5001/helm-charts/ocichart --version 0.1.0 |
+| See template | helm template myrelease oci://localhost:5001/helm-charts/ocichart –version 0.1.0 |
+| Install chart | helm install myrelease oci://localhost:5001/helm-charts/ocichart –version 0.1.0 |
+| Upgrade chart | helm upgrade myrelease oci://localhost:5001/helm-charts/ocichart –version 0.2.0 |
+| Login to registry | helm registry login -u username oci://localhost:5001 |
+| Logout from registry | helm registry logout oci://localhost:5001 |
 
 # Chart Security
 
-<img src="img/media/image131.png" style="width:4.51236in;height:1.78219in" />
+![Chart Security Example](img/media/image131.png)
 
 When it comes to charts, provenance and integrity are important.
 
@@ -472,19 +439,19 @@ Comment : optional
 
 Finally, you have to select the passphrase to access the keys.
 
-<img src="img/media/image48.png" style="width:6.5in;height:5.63889in" />
+![Generate Key Example](img/media/image48.png)
 
 By now the keys are stored under ~/.gnupg/
 
 As of 2021, kbx files are generated by pgp commands. But we need to convert them to .gpg files for helm to use.
 
-<img src="img/media/image82.png" style="width:6.5in;height:3.30556in" />
+![Convert Keys Example](img/media/image82.png)
 
 Use the below command to perform the conversion.
 
 \$ gpg --export-secret-keys \> ~/.gnupg/secring.gpg
 
-<img src="img/media/image1.png" style="width:6.5in;height:0.68056in" />
+![Export Keys Example](img/media/image1.png)
 
 Now both public and private keys are part of the gpg file and ready to be used by helm
 
@@ -496,29 +463,29 @@ Let’s sign the chart while packaging
 
 - Run the command to package along with signing
 
-<img src="img/media/image102.png" style="width:6.5in;height:1.36111in" />
+![Sign Chart Example](img/media/image102.png)
 
 Two files are created.
 
-<img src="img/media/image65.png" style="width:5.13542in;height:0.80208in" />
+![Signed Files Example](img/media/image65.png)
 
 The prov file has the signing information.
 
 ### Verify the Signature of the chart
 
-<img src="img/media/image31.png" style="width:6.5in;height:1.19444in" />
+![Verify Signature Example](img/media/image31.png)
 
 we create an index in the chart repo and start the local repository server.
 
 With the below command, we can verify and install the chart when pulled from the repository.
 
-<img src="img/media/image84.png" style="width:6.5in;height:3.23611in" />
+![Verify and Install Chart Example](img/media/image84.png)
 
 If the installation fails, then it implies that the chart signature is not verified. You would see an error.
 
 # Use Cases
 
-<img src="img/media/image116.png" style="width:6.5in;height:1.16667in" />
+![Use Cases Example](img/media/image116.png)
 
 For this use case, we will be performing below set of actions
 
@@ -536,7 +503,7 @@ For this use case, we will be performing below set of actions
 
 ## Create chart and configure image
 
-<img src="img/media/image26.png" style="width:6.16667in;height:0.58333in" />
+![Create Chart Example](img/media/image26.png)
 
 We dont need hpa(scaling) ingress and service account. So remove those yamls.
 
@@ -544,7 +511,7 @@ For all the steps, go through the commits and check the changes.
 
 GIT URL:
 
-<img src="img/media/image119.png" style="width:6.5in;height:2.63889in" />
+![Git URL Example](img/media/image119.png)
 
 # HELM Starters
 
