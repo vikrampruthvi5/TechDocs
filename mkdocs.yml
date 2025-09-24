@@ -53,6 +53,7 @@ extra:
     deprecated: Deprecated
 
 plugins:
+  - glightbox
   - search
   - awesome-pages
   - minify:

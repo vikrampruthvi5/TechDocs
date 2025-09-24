@@ -32,3 +32,8 @@ spec:
 
 !!! note "When pod binding should be used"
     Pod binding is used only when the pod is already bound to a node and you want to change the node. 
+
+
+## Taints & Tolerations
+
+![Taints](images/taint.png){ data-glightbox="title: Grafana dashboard" width="50%"}
