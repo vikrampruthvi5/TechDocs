@@ -15,3 +15,14 @@
   padding-top: .65rem;
   padding-bottom: .75rem;
 }
+.md-button {
+  padding: 2px !important;
+  margin-top: 5px !important;
+  color: orange !important;
+}
+
+html[style*="background-color: white"] .md-button {
+  padding: 2px !important;
+  margin-top: 5px !important;
+  color: blue !important;
+}
