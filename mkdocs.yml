@@ -16,12 +16,14 @@ theme:
   features:
     - content.tabs.link      # linkable tabs (adds a tiny link icon)
     - navigation.instant
-    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
     - navigation.tracking
     - navigation.footer
     - toc.follow
     - content.code.copy
-    - content.action.edit
+    # - content.action.edit
     - content.tabs.link
     - search.suggest
     - search.highlight
@@ -56,8 +58,7 @@ plugins:
   - minify:
       minify_html: true
   - git-revision-date-localized:
-      enable_creation_date: true
-      fallback_to_build_date: true
+      enable_creation_date: false
 
 markdown_extensions:
   - attr_list
