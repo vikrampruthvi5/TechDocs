@@ -1,0 +1,39 @@
+/* Import clean, legible fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Reduce roundness & shadows for a “suite-like” feel */
+:root {
+  --md-sys-shape-corner-medium: 6px;
+  --md-sys-color-outline-variant: rgba(255,255,255,.08);
+}
+
+/* Headings: slightly tighter and neutral */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+/* Table polish */
+.md-typeset table:not([class]) {
+  font-size: .95rem;
+}
+.md-typeset table:not([class]) th, 
+.md-typeset table:not([class]) td {
+  border-color: var(--md-sys-color-outline-variant);
+}
+
+/* Admonitions: subtle borders */
+.md-typeset .admonition, .md-typeset details {
+  border-radius: 6px;
+  border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Code blocks: slightly denser */
+.md-typeset pre > code {
+  line-height: 1.35;
+}
+
+/* Footer: muted, compact */
+.md-footer {
+  font-size: .9rem;
+}

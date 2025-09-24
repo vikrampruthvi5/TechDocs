@@ -1,0 +1,17 @@
+/* Big KPI numbers */
+.kpi .kpi-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Slightly denser compact cards section */
+.compact .md-typeset h3,
+.compact .md-typeset h4 {
+  margin-top: .4rem;
+}
+.compact .md-card {
+  padding-top: .65rem;
+  padding-bottom: .75rem;
+}
