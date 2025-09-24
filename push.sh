@@ -15,5 +15,5 @@ cd /Users/pvikram/Documents/Learning/TechDocs || exit
 
 # Perform git operations
 git add .
-git commit -m "$COMMIT_MESSAGE"
+git commit -m "$(date): $COMMIT_MESSAGE"
 git push origin "$BRANCH_NAME"
