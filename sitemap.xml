@@ -6,6 +6,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://vikrampruthvi5.github.io/Helm/</loc>
+         <lastmod>2025-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vikrampruthvi5.github.io/Helm/adv_charts/</loc>
+         <lastmod>2025-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://vikrampruthvi5.github.io/Kubestronaut/KCNA/</loc>
          <lastmod>2025-09-24</lastmod>
          <changefreq>daily</changefreq>
