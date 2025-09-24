@@ -1,41 +1,80 @@
 site_name: My Class Book
+site_description: Internal knowledge & study notes
+site_url: https://vikrampruthvi5.github.io/
+repo_url: https://github.com/vikrampruthvi5
+edit_uri: edit/main/docs/
+use_directory_urls: true
+strict: true
+
 theme:
   name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/book-open-variant
   features:
     - navigation.instant
-    - navigation.tabs
     - navigation.sections
-    - navigation.top
-    - search.highlight
-    - search.suggest
+    - navigation.tracking
+    - navigation.footer
+    - toc.follow
     - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
   palette:
     - scheme: slate
-      primary: teal      # main header, nav highlight, links
-      accent: cyan       # buttons, focus outlines, sliders
+      primary: indigo
+      accent: blue grey
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
     - scheme: default
-      primary: teal
-      accent: cyan
+      primary: indigo
+      accent: blue grey
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/vikrampruthvi5
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/pruthvivikram
+  generator: false
+  status:
+    new: New
+    deprecated: Deprecated
+
 plugins:
   - search
   - awesome-pages
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+
 markdown_extensions:
   - toc:
       permalink: true
   - admonition
-  - codehilite
-  - footnotes
   - def_list
+  - footnotes
   - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - assets/css/corporate.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js

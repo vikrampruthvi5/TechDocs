@@ -4,7 +4,7 @@
 ### Pod Binding
 When a pod is already assigned to a node using nodeName. Kubernetes do not allow you to change the ndoe name once assigned. For that you need to use binding
 
-```yaml
+```yaml title="pod-binding.yml"
 apiVersion: v1
 kind: Binding 
 metadata:
@@ -15,7 +15,7 @@ target:
     name: node02
 ```
 
-```yaml
+```yaml title="pod-definition.yml"
 apiVersion: v1
 kind: Pod
 metadata:
@@ -29,3 +29,6 @@ spec:
       ports:
         - containerPort:
 ```
+
+!!! note "When pod binding should be used"
+    Pod binding is used only when the pod is already bound to a node and you want to change the node. 
