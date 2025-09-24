@@ -1,0 +1,7 @@
+site_name: Tech Learning by Vikram
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Topics:
+      - Topic 1: KCNA.md
