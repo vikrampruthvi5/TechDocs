@@ -1,6 +1,6 @@
 
 !!! tip "Source Code"
-    [Reference code base](https://github.com/vikrampruthvi5/TechDocs/blob/main/docs/MKDOCS%20Assets/tweaks.md){ target=_blank rel="noopener" } contains all the examples on how to use the Material Design features.
+    [Reference code base](https://github.com/vikrampruthvi5/TechDocs/blob/main/docs/MKDOCS%20Assets/tweaks.md?plain=1){ target=_blank rel="noopener" } contains all the examples on how to use the Material Design features.
 
 
 ## Title to Code block
